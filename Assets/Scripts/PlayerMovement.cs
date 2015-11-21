@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (grounded) {
             if (Input.GetButtonDown("Jump")) {
-				Debug.Log("Jumping!");
 				rgbd.velocity += new Vector2(0f, jumpForce);
 				grounded = false;
             }
@@ -49,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "Ground") {
-			Debug.Log("Collide");
 			grounded = true;
 		}
     }
