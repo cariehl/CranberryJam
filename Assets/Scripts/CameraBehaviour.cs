@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraBehaviour : MonoBehaviour {
 
-    GameObject player;
+    public GameObject player;
     public float upperBound = 0.8f;
     float x;
     float z;
@@ -13,7 +13,6 @@ public class CameraBehaviour : MonoBehaviour {
     // Use this for initialization
     void Start ()
 	{
-        player = GameObject.Find("Player");
         x = transform.position.x;
         z = transform.position.z;
 		playerHeight = player.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
