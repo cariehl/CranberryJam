@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class platform : MonoBehaviour {
-
+public class Platform : MonoBehaviour
+{
     public float falling_chance = 0.10f;
     public float speed = 5f;
     public float time = 2f;
@@ -10,6 +10,38 @@ public class platform : MonoBehaviour {
     bool falling;
     [HideInInspector] public bool touched;
     bool shake;
+
+	GameObject[] segments;
+
+	GameObject leftSegment = Resources.Load("leftSegment") as GameObject;
+	GameObject rightSegment = Resources.Load("rightSegment") as GameObject;
+	GameObject middleSegment = Resources.Load("middleSegment") as GameObject;
+	GameObject singleSegment = Resources.Load("singleSegment") as GameObject;
+
+	public void Generate(int length)
+	{
+		segments = new GameObject[length];
+		Vector2 genPos = transform.position;
+		GameObject segment;
+		if (length == 1) {
+			segment = Instantiate(singleSegment, genPos, Quaternion.identity) as GameObject;
+			segment.transform.parent = this.transform;
+			segments[0] = segment;
+		} else {
+			for (int i = 0; i < length; i++) {
+				GameObject toGen = middleSegment;
+				if (i == 0)
+					toGen = leftSegment;
+				else if (i == length - 1)
+					toGen = rightSegment;
+
+				segment = Instantiate(toGen, genPos, Quaternion.identity) as GameObject;
+				segment.transform.parent = this.transform;
+				segments[i] = segment;
+				genPos += new Vector2(1, 0);
+			}
+		}
+	}
     
 	// Use this for initialization
 	void Start () {
