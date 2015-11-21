@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public float speed = 1;
 	// Target jump height in terms of units
-    public float targetJumpHeight = 69;
+    public float targetJumpHeight = 3.2f;
 	private float jumpForce;
     private Rigidbody2D rgbd;
     bool grounded = false;

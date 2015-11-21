@@ -13,7 +13,7 @@ GameObject:
   - 251: {fileID: 25104034}
   - 50: {fileID: 5039312}
   m_Layer: 0
-  m_Name: platform
+  m_Name: PlatformSegment
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

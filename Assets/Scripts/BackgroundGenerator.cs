@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RandomGenBackground : MonoBehaviour
+public class BackgroundGenerator : MonoBehaviour
 {
 	// Number of extra tiles to generate in the X and Y directions
 	public int tileOffsetX;
