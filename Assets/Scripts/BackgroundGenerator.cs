@@ -3,42 +3,50 @@ using System.Collections;
 
 public class BackgroundGenerator : MonoBehaviour
 {
-	// Number of extra tiles to generate in the X and Y directions
-	public int tileOffsetX;
-	public int tileOffsetY;
+	// Extra width to take up in the X and Y directions
+	public float tileOffsetX;
+	public float tileOffsetY;
 	// List of tiles and their weighted random chances
-	public GameObject[] tiles;
+	public Sprite[] tiles;
 	public int[] tileWeights;
-	
-	int startX = 0;		// x-coord to start making tiles per row
-	int endX = 0;       // x-coord to end making tiles per row
-	int lowestTileRow = 0;
+
+	float tileWidth;	// Unit width of each tile
+	float tileHeight;	// Unit height of each tile
+	float startX = 0f;	// x-coord to start making tiles per row
+	float endX = 0f;	// x-coord to end making tiles per row
 
 	// Current highest y level of tiles
-	int screenTopMax;
+	float screenTopMax;
+
+	int lowestTileRow;
+	int numRows;
 
 	// Creates a new row of random tiles at position y
-	void MakeNewRow(int height)
+	void MakeNewRow(float height)
 	{
-		GameObject rowContainer = new GameObject("Row" + height);
+		GameObject rowContainer = new GameObject("Row" + numRows);
+		numRows++;
 		rowContainer.transform.parent = this.transform;
+
 		// Make a tile at each X point from left to right
-		for (int i = startX; i < endX; i++)
-		{
-			GameObject tileToMake = tiles[0];
+		for (float i = startX; i < endX; i += tileWidth) {
+			Sprite spriteToUse = tiles[0];
 			int rand = Random.Range(0, 100);
 			// Compare our random number to the weighted chance of each tile
 			for (int j = 0; j < tiles.Length; j++)
 			{
 				if (rand < tileWeights[j])
 				{
-					tileToMake = tiles[j];
+					spriteToUse = tiles[j];
 					break;
 				}
 				// If we didnt find the right tile, subtract that tile's
 				// weighted random change from our random number
 				rand -= tileWeights[j];
 			}
+
+			GameObject tileToMake = new GameObject();
+			tileToMake.AddComponent<SpriteRenderer>().sprite = spriteToUse;
 
 			GameObject newTile = Instantiate(tileToMake, new Vector3(i, height), Quaternion.identity) as GameObject;
 			newTile.transform.parent = rowContainer.transform;
@@ -51,12 +59,17 @@ public class BackgroundGenerator : MonoBehaviour
 		Vector2 botLeftScreen = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, Camera.main.nearClipPlane));
 		Vector2 topRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane));
 
-		screenTopMax = Mathf.RoundToInt(topRightScreen.y) + tileOffsetY;
-		startX = Mathf.RoundToInt(botLeftScreen.x) - tileOffsetX;
-		endX = Mathf.RoundToInt(topRightScreen.x) + tileOffsetX;
-		lowestTileRow = Mathf.RoundToInt(botLeftScreen.y) - tileOffsetY;
+		tileWidth = tiles[0].bounds.size.x;
+		tileHeight = tiles[0].bounds.size.y;
+		lowestTileRow = 0;
+		numRows = 0;
 
-		for (int i = lowestTileRow; i <= Mathf.RoundToInt(topRightScreen.y) + tileOffsetY; i++)
+		screenTopMax = topRightScreen.y + tileOffsetY;
+		float screenBot = botLeftScreen.y - tileOffsetY;
+		startX = botLeftScreen.x - tileOffsetX;
+		endX = topRightScreen.x + tileOffsetX;
+
+		for (float i = screenBot; i <= screenTopMax; i += tileHeight)
 		{
 			MakeNewRow(i);
 		}
@@ -65,11 +78,11 @@ public class BackgroundGenerator : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		int screenTopCurrent = Mathf.RoundToInt(Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f)).y) + tileOffsetY;
+		float screenTopCurrent = Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f)).y + tileOffsetY;
 		if (screenTopCurrent > screenTopMax)
 		{
-			screenTopMax = screenTopCurrent;
 			MakeNewRow(screenTopMax);
+			screenTopMax += tileHeight;
 			Destroy(GameObject.Find("Row" + lowestTileRow));
 			lowestTileRow++;
 		}

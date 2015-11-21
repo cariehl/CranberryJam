@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 	public IEnumerator FallOut()
 	{
 		this.GetComponent<BoxCollider2D>().enabled = false;
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(1.0f);
 		Application.LoadLevel("GameOver");
 	}
 
