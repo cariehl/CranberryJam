@@ -9,8 +9,11 @@ public class Rope : MonoBehaviour {
 	public bool arrived = false;
 	private float temp;
 	private float trans;
+	private float dist;
 	public float radius;
 	public bool roping;
+
+	public SpriteRenderer rope;
 
 	void Awake()
 	{
@@ -34,16 +37,22 @@ public class Rope : MonoBehaviour {
 		else if (roping) {
 			if (arrived) {
 				gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
+				//deactivate rope
 			} else {
-				if (trans > 0.9f) {
+				Crosshair.S.aiming = false;
+				dist = Vector3.Distance(transform.position ,new Vector3 (objective.x, objective.y, 0f) );
+				if (dist < 0.3f ) {
+
 					trans = 0f;
 					arrived = true;
 					roping = false;
-					Crosshair.S.aiming = false;
+
 					gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 
 				} else {
-					trans += 0.1f;
+					Vector3 temp2 = new Vector3(rope.transform.localScale.x + (trans*1) , rope.transform.localScale.y, 0);
+					rope.transform.localScale = temp2;
+					trans += 0.0005f;
 					transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), trans);
 				}
 			}

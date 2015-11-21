@@ -11,6 +11,10 @@ public class Crosshair : MonoBehaviour {
 	public Sprite target;
 	Camera cam;
 
+	public Sprite hitch_off;
+	public Sprite hitch_on;
+	
+
 	//Get the current mouse position in 2d Screen coords
 	Vector3 mousePos2D;
 
@@ -49,11 +53,10 @@ public class Crosshair : MonoBehaviour {
 			Vector3 projPos = Rope.S.transform.position + mouseDelta;
 			projectile.transform.position = projPos;
 
-			cr_objective = projectile.transform.position;
 			if (Rope.S.num_ropes > 0) {
 				if (Input.GetButtonDown ("Fire3")) {
 					if (!hitch) {
-						Rope.S.objective = cr_objective;
+						Rope.S.objective = projectile.transform.position;
 						Rope.S.moveToRope ();
 					} else { 
 						Rope.S.objective = cr_objective;
@@ -66,11 +69,10 @@ public class Crosshair : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		Debug.Log("detected CH col");
 		if (coll.tag.Equals ("Hitch") ) {
-			Debug.Log ("A Hitch!");
+			coll.gameObject.GetComponent<SpriteRenderer>().sprite = hitch_on;
 			hitch = true;
-			cr_objective = coll.transform.position;
+			cr_objective = coll.transform.position + new Vector3(0,1f,0);
 		}
 
 	}
@@ -78,6 +80,9 @@ public class Crosshair : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D coll)
 	{
+		if (coll.tag.Equals ("Hitch") ) {
+			coll.gameObject.GetComponent<SpriteRenderer>().sprite = hitch_off;
+		}
 		hitch = false;
 	}
 }
