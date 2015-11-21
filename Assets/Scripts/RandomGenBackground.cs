@@ -3,24 +3,27 @@ using System.Collections;
 
 public class RandomGenBackground : MonoBehaviour
 {
+	// Number of extra tiles to generate in the X and Y directions
+	public int tileOffsetX;
+	public int tileOffsetY;
 	// List of tiles and their weighted random chances
 	public GameObject[] tiles;
 	public int[] tileWeights;
+	
+	int startX = 0;		// x-coord to start making tiles per row
+	int endX = 0;       // x-coord to end making tiles per row
+	int lowestTileRow = 0;
 
-	// Minimum x point to start generating tiles
-	int minX;
 	// Current highest y level of tiles
-	int currentMaxY;
-
-	// Number of tiles to exist in horizontal and vertical directions
-	const int tilesWide = 6;
-	const int tilesHigh = 6;
+	int screenTopMax;
 
 	// Creates a new row of random tiles at position y
 	void MakeNewRow(int height)
 	{
+		GameObject rowContainer = new GameObject("Row" + height);
+		rowContainer.transform.parent = this.transform;
 		// Make a tile at each X point from left to right
-		for (int i = minX; i < minX + tilesWide; i++)
+		for (int i = startX; i < endX; i++)
 		{
 			GameObject tileToMake = tiles[0];
 			int rand = Random.Range(0, 100);
@@ -38,24 +41,22 @@ public class RandomGenBackground : MonoBehaviour
 			}
 
 			GameObject newTile = Instantiate(tileToMake, new Vector3(i, height), Quaternion.identity) as GameObject;
-			newTile.transform.parent = this.transform;
-		}
-	}
-
-	void DeleteRow(int height)
-	{
-		for (int i = minX; i < minX + tilesWide; i++)
-		{
-
+			newTile.transform.parent = rowContainer.transform;
 		}
 	}
 
 	// Use this for initialization
 	void Start ()
 	{
-		minX = (int)Camera.main.transform.position.x - 3;
-		int y = (int)Camera.main.transform.position.y - 3;
-		for (int i = y; i <= y + tilesHigh; i++)
+		Vector2 botLeftScreen = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, Camera.main.nearClipPlane));
+		Vector2 topRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane));
+
+		screenTopMax = Mathf.RoundToInt(topRightScreen.y) + tileOffsetY;
+		startX = Mathf.RoundToInt(botLeftScreen.x) - tileOffsetX;
+		endX = Mathf.RoundToInt(topRightScreen.x) + tileOffsetX;
+		lowestTileRow = Mathf.RoundToInt(botLeftScreen.y) - tileOffsetY;
+
+		for (int i = lowestTileRow; i <= Mathf.RoundToInt(topRightScreen.y) + tileOffsetY; i++)
 		{
 			MakeNewRow(i);
 		}
@@ -64,11 +65,13 @@ public class RandomGenBackground : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		int currentY = (int)Camera.main.transform.position.y - 3 + tilesHigh;
-		if (currentY > currentMaxY)
+		int screenTopCurrent = Mathf.RoundToInt(Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f)).y) + tileOffsetY;
+		if (screenTopCurrent > screenTopMax)
 		{
-			currentMaxY = currentY;
-			MakeNewRow(currentMaxY);
+			screenTopMax = screenTopCurrent;
+			MakeNewRow(screenTopMax);
+			Destroy(GameObject.Find("Row" + lowestTileRow));
+			lowestTileRow++;
 		}
 	}
 }
