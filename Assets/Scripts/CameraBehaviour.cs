@@ -5,8 +5,6 @@ public class CameraBehaviour : MonoBehaviour {
 
     GameObject player;
     public float upperBound = 0.8f;
-    float x;
-    float z;
 	float playerTopY;
 	float playerHeight;
 
@@ -14,8 +12,6 @@ public class CameraBehaviour : MonoBehaviour {
     void Start ()
 	{
         player = GameObject.Find("Player");
-        x = transform.position.x;
-        z = transform.position.z;
 		playerHeight = player.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
 	}
 	
