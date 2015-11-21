@@ -53,7 +53,7 @@ public class Crosshair : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		//Debug.Log("detected CH col");
+		Debug.Log("detected CH col");
 		if (coll.tag.Equals ("Hitch") ) {
 			Debug.Log ("A Hitch!");
 			hitch = true;
