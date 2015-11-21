@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1577479002}
-  upperBound: .699999988
+  upperBound: .800000012
 --- !u!81 &381595850
 AudioListener:
   m_ObjectHideFlags: 0
@@ -224,6 +224,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: tileOffsetX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
   m_IsPrefabParent: 0
@@ -329,6 +333,22 @@ Prefab:
     - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403848, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
+      propertyPath: targetJumpHeight
+      value: 3.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044182, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044182, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403848, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}

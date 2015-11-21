@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1f;
 	// Target jump height in terms of units
 	public float targetJumpHeight = 3.2f;
-
+	
 	float jumpForce;
     Rigidbody2D rgbd;
     bool grounded = false;
@@ -15,10 +15,12 @@ public class PlayerMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		jumpForce = Mathf.Sqrt(2f * targetJumpHeight * (-1 * Physics2D.gravity.y));
 		rgbd = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-        anim.SetBool("running", false);
+		
+		targetJumpHeight *= rgbd.gravityScale;
+		jumpForce = Mathf.Sqrt(2f * targetJumpHeight * Mathf.Abs(Physics2D.gravity.y));
+		anim.SetBool("running", false);
         anim.SetBool("facing_left", false);
     }
 	
@@ -34,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (grounded) {
             if (Input.GetButtonDown("Jump")) {
-				rgbd.velocity += new Vector2(0f, jumpForce);
+				rgbd.velocity += new Vector2(0f, 1f * jumpForce);
 				grounded = false;
             }
             if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0) {
@@ -42,13 +44,17 @@ public class PlayerMovement : MonoBehaviour
             } else
                 anim.SetBool("running", false);
         }
+		
         rgbd.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rgbd.velocity.y);
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "Ground") {
-			grounded = true;
+			// Checks to see if we hit the collider from the top
+			if (coll.enabled) {
+				grounded = true;
+			}
 		}
     }
 }
