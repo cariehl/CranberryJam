@@ -118,6 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1577479002}
   upperBound: .800000012
+  lowerBound: .100000001
+  camMinimumOffset: 2.5
 --- !u!81 &381595850
 AudioListener:
   m_ObjectHideFlags: 0
@@ -228,6 +230,10 @@ Prefab:
       propertyPath: tileOffsetX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: tileOffsetY
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
   m_IsPrefabParent: 0
@@ -291,6 +297,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1001 &1569426940
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473292, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1577479002 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}

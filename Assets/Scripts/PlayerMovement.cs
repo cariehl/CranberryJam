@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rgbd;
     bool grounded = false;
     Animator anim;
+	
 
 	// Use this for initialization
 	void Start ()
@@ -46,6 +47,14 @@ public class PlayerMovement : MonoBehaviour
         }
 		
         rgbd.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rgbd.velocity.y);
+	}
+
+	// Cause the player to fall out of the world
+	public IEnumerator FallOut()
+	{
+		this.GetComponent<BoxCollider2D>().enabled = false;
+		yield return new WaitForSeconds(1.5f);
+		Application.LoadLevel("GameOver");
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
