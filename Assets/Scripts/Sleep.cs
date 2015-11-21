@@ -12,13 +12,9 @@ public class Sleep : MonoBehaviour {
 	public int sleepTick;
 	public int tiredness = 0;
 	public int score = 0;
-
-
-	public Sprite A;
-	public Sprite K;
 	
-
 	private int counter =1;
+
 	// Use this for initialization
 	void Start () {
 	
