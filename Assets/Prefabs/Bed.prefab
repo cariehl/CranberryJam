@@ -85,7 +85,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   K: {fileID: 21300000, guid: 13cecc246de4cef4c87bbd854897b582, type: 3}
   A: {fileID: 21300000, guid: fb39d4a078a05434c8a02082017e9cc7, type: 3}
+  B: {fileID: 0}
+  L: {fileID: 0}
   button: {fileID: 21267738}
+  button2: {fileID: 0}
 --- !u!212 &21204340
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -104,7 +107,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -130,7 +135,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
