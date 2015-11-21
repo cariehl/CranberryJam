@@ -4,20 +4,25 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
     public float speed = 1;
-    public float jumpforce = 69;
+	// Target jump height in terms of units
+    public float targetJumpHeight = 69;
+	private float jumpForce;
     private Rigidbody2D rgbd;
     bool grounded = false;
 
 	// Use this for initialization
-	void Start () {
-        rgbd = GetComponent<Rigidbody2D>();
+	void Start ()
+	{
+		jumpForce = Mathf.Sqrt(2f * targetJumpHeight * (-1 * Physics2D.gravity.y));
+		rgbd = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (grounded) {
             if (Input.GetButtonDown("Jump")) {
-                rgbd.AddForce(Vector2.up * jumpforce);
+                //rgbd.AddForce(Vector2.up * jumpForce);
+				rgbd.velocity += new Vector2(0.0f, jumpForce);
                 grounded = false;
             }
         }
