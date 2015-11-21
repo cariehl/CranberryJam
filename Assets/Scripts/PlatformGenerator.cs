@@ -13,24 +13,20 @@ public class PlatformGenerator : MonoBehaviour
 	int nextPlatformNum = 0;	// Determines the number of the next generated template
 	int screenLowStart = 0;		// Lowest y-coord of the screen at the start of the game
 	int currentGeneratedHeight = 0;	// Highest unit of platform we have generated so far
-	int screenHeight = 0;       // Height of the screen, used to determine when to generate another platform
-	GameObject platformContainer;
+	int screenHeight = 0;		// Height of the screen, used to determine when to generate another platform
 
 	// Create a new instance of the template at the given index in our array
 	void MakeNewPlatform(int index)
 	{
 		PlatformTemplateData data = platformTemplates[index].GetComponent<PlatformTemplateData>();
 		// Instantiate our new platform template
-		for (int i = 0; i < data.platforms.Length; i++) {
-			GameObject platform = Instantiate(
-				new GameObject("Platform"),
-				new Vector3(data.platforms[i].x + data.offsetX, data.platforms[i].y + data.offsetY + currentGeneratedHeight),
-				Quaternion.identity
-			) as GameObject;
-			platform.transform.parent = platformContainer.transform;
-			platform.AddComponent<Platform>();
-			platform.GetComponent<Platform>().Generate(data.platforms[i].length);
-		}
+		GameObject platform = Instantiate(
+			platformTemplates[index],
+			new Vector3(data.offsetX, currentGeneratedHeight + data.offsetY, 0),
+			Quaternion.identity
+		) as GameObject;
+		// Name the template so we can delete it later
+		platform.name = "Template" + nextPlatformNum;
 		// Increment our height and template number
 		currentGeneratedHeight += data.height;
 		nextPlatformNum++;
@@ -45,7 +41,6 @@ public class PlatformGenerator : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		platformContainer = new GameObject("platformContainer");
 		screenLowStart = Mathf.RoundToInt(Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f)).y);
 		screenHeight = Mathf.RoundToInt(Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f)).y - screenLowStart);
 		// First template in the list is always the first one generated,
