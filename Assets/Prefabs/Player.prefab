@@ -42,7 +42,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpforce: 500
+  targetJumpHeight: 3.20000005
+  jumpForce: 0
 --- !u!212 &21215150
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,11 +110,13 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2081496113
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d257f74a07caf8c41ae2687293cab2c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,6 +143,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: 2081496113
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
