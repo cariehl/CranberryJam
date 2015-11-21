@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1137099457
+    locked: 0
+  - name: Tower
+    uniqueID: 1843473825
+    locked: 0
+  - name: Game Layer
+    uniqueID: 2003980487
+    locked: 0
+  - name: Foreground
+    uniqueID: 1291190477
+    locked: 0
