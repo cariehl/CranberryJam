@@ -24,7 +24,14 @@ public class Rope : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (roping) {
+
+		if (Input.GetButtonDown ("Fire3")) {
+			Crosshair.S.aiming = true;
+		}
+
+
+
+		else if (roping) {
 			if (arrived) {
 				gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 			} else {
@@ -32,7 +39,9 @@ public class Rope : MonoBehaviour {
 					trans = 0f;
 					arrived = true;
 					roping = false;
+					Crosshair.S.aiming = false;
 					gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
+
 				} else {
 					trans += 0.1f;
 					transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), trans);
