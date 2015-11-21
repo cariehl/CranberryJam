@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821258a21e6790540a4c84671f96a06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1787105774}
+  player: {fileID: 1577479002}
   upperBound: .699999988
 --- !u!81 &381595850
 AudioListener:
@@ -287,65 +287,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1001 &1787105773
+--- !u!1 &1577479002 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 140534, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
+  m_PrefabInternal: {fileID: 1734703265}
+--- !u!1001 &1734703265
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.50999999
+      value: -2.95000005
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.27999997
+      value: .310000002
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+    - target: {fileID: 414672, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 414672, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11403848, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
-      propertyPath: targetJumpHeight
-      value: 3.20000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044182, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1787105774 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 140534, guid: b003dd684ac163c4eafe3138b84a8c0d, type: 2}
-  m_PrefabInternal: {fileID: 1787105773}
