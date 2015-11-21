@@ -2,10 +2,23 @@
 using System.Collections;
 
 public class Sleep : MonoBehaviour {
+	static public Sleep S;
+
+	void Awake()
+	{
+		S = this;
+	}
+
 	public int sleepTick;
 	public int tiredness = 0;
+	public int score = 0;
 
-	private int counter =0;
+
+	public Sprite A;
+	public Sprite K;
+	
+
+	private int counter =1;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,7 +28,8 @@ public class Sleep : MonoBehaviour {
 	void Update () {
 	if ((counter % sleepTick) == 0) {
 			tiredness++;
-			counter=0;
+			score++;
+			counter=1;
 		}
 	if (tiredness == 100) {
 			Debug.Log ("You fell asleep");
@@ -24,4 +38,5 @@ public class Sleep : MonoBehaviour {
 	counter++;
 
 	}
+
 }
