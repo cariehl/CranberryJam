@@ -4,21 +4,28 @@ using System.Collections;
 public class CameraBehaviour : MonoBehaviour {
 
     GameObject player;
-    public float offset = 3;
+    public float upperBound = 0.8f;
     float x;
     float z;
+	float playerTopY;
+	float playerHeight;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+	{
         player = GameObject.Find("Player");
         x = transform.position.x;
         z = transform.position.z;
-    }
+		playerHeight = player.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
+	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (player.transform.position.y - transform.position.y > offset) {
-            transform.position = new Vector3 (x, (player.transform.position.y - offset), z);
+	void Update ()
+	{
+		playerTopY = player.transform.position.y + playerHeight;
+		float camHeightY = Camera.main.ViewportToWorldPoint(new Vector3(0, upperBound, Camera.main.nearClipPlane)).y;
+        if (playerTopY > camHeightY) {
+			transform.position += new Vector3(0, playerTopY - camHeightY, 0);
         }
 	}
 }
