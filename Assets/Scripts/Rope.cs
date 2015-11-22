@@ -14,6 +14,7 @@ public class Rope : MonoBehaviour {
 	public bool roping;
 
 	public SpriteRenderer rope;
+	public Sprite ropeSprite;
 
 	void Awake()
 	{
@@ -30,6 +31,8 @@ public class Rope : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire3")) {
 			Crosshair.S.aiming = true;
+			rope.sprite = ropeSprite;
+			rope.transform.position = gameObject.transform.position;
 		}
 
 
@@ -46,7 +49,8 @@ public class Rope : MonoBehaviour {
 					trans = 0f;
 					arrived = true;
 					roping = false;
-
+					rope.sprite = null;
+					rope.transform.localScale = Vector3.one;
 					gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 
 				} else {
