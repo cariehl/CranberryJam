@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Rope : MonoBehaviour {
-	static public Rope S;
+	public static Rope S;
 	public Vector3 objective;
 	
 	public int num_ropes = 1;

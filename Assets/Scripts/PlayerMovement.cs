@@ -71,10 +71,10 @@ public class PlayerMovement : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.gameObject.tag == "Coin") {
-			// TODO: Increase score
+			DontDestroy.S.score += 5;
 			Destroy(coll.gameObject);
 		} else if (coll.gameObject.tag == "Rope") {
-			// TODO: Increase rope count
+			Rope.S.num_ropes++;
 			Destroy(coll.gameObject);
 		}
 	}

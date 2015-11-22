@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DontDestroy : MonoBehaviour {
-
+public class DontDestroy
+{
     public float score;
-    static public DontDestroy S;
+	private static DontDestroy _s = null;
+    public static DontDestroy S {
+		get {
+			if (_s == null)
+				_s = new DontDestroy();
+			return _s;
+		}
+	}
 
-
-    void Awake() {
-        S = this;
-        DontDestroyOnLoad(transform.gameObject);
-    }
+	private DontDestroy()
+	{
+		score = 0;
+	}
 }
