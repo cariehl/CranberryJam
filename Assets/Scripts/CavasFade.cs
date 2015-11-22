@@ -39,7 +39,7 @@ public class CavasFade : MonoBehaviour {
                 if (img.color.a < 0.05) {
                     black = true;
                     tent = false;
-                    PlayerMovement.S.can_move = true;
+                    //PlayerMovement.S.can_move = true;
                 }
             }
         } else {

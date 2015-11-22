@@ -21,8 +21,8 @@ public class Bed : MonoBehaviour {
     void OnTriggerStay2D(Collider2D coll) {
         if (!done && Input.GetButtonDown("Fire1")) {
             CavasFade.S.tent = true;
-            //Time.timeScale = 0;
-            //Sleep.S.tiredness = 0;
+            //PlayerMovement.S.can_move = false;
+            Sleep.S.tiredness = 0;
             rend.sprite = sprites[1];
             done = true;
         }
