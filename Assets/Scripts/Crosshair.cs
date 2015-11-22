@@ -7,7 +7,7 @@ public class Crosshair : MonoBehaviour {
 
 	public GameObject projectile;
 	public Sprite target;
-	public float ropeCooldown = 5f;
+	public float ropeCooldown = 1f;
 
 	public bool ___________________;
 
@@ -57,10 +57,14 @@ public class Crosshair : MonoBehaviour {
 					Rope.S.objective = projectile.transform.position + Vector3.up*2;
 					LineRendererScript.S.destination = projectile.transform;
 					Rope.S.moveToRope ();
+					Rope.S.num_ropes--;
 				}
 				if(cooldown > 1) {
 					gameObject.GetComponent<SpriteRenderer>().color = Color.red;
 				}
+			}
+			else {
+				gameObject.GetComponent<SpriteRenderer> ().color = Color.gray;
 			}
 		}
 		this.aiming = Crosshair.S.aiming;

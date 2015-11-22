@@ -52,7 +52,7 @@ public class CameraBehaviour : MonoBehaviour {
 				transform.Translate(new Vector3(0, playerBotY - camBotY, 0));
 			} else if (playerBotY < killzone) {
 				// Dead
-				Debug.Log("Killzone");
+				//Debug.Log("Killzone");
 				StartCoroutine(player.GetComponent<PlayerMovement>().FallOut(tutorial));
 			}
 		}

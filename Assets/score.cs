@@ -13,6 +13,6 @@ public class score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        txt.text = "Score: " + Mathf.FloorToInt(DontDestroy.S.score).ToString() + "\nRopes: " + Rope.S.num_ropes.ToString();
+        txt.text = Mathf.FloorToInt(DontDestroy.S.score).ToString();
 	}
 }

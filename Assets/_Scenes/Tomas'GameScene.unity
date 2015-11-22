@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11428588, guid: 5ab31c3d6e0a33843b6b6a2421cc0506, type: 2}
+      propertyPath: ropeCooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ab31c3d6e0a33843b6b6a2421cc0506, type: 2}
   m_IsPrefabParent: 0
@@ -141,7 +145,8 @@ GameObject:
   - 81: {fileID: 381595850}
   - 114: {fileID: 381595849}
   - 114: {fileID: 381595856}
-  - 82: {fileID: 381595855}
+  - 114: {fileID: 381595855}
+  - 82: {fileID: 381595857}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -232,7 +237,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!82 &381595855
+--- !u!114 &381595855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381595848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125847d2d4d7de543bde0962d4f65728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiolist: {fileID: 381595850}
+  Sfx: {fileID: 381595857}
+--- !u!114 &381595856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381595848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125847d2d4d7de543bde0962d4f65728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiolist: {fileID: 0}
+  Sfx: {fileID: 0}
+--- !u!82 &381595857
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -241,7 +272,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4f9a567c32e4f0d43b3f4defe929824d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -302,18 +333,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &381595856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 381595848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125847d2d4d7de543bde0962d4f65728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audiolist: {fileID: 0}
 --- !u!1 &755123974
 GameObject:
   m_ObjectHideFlags: 0

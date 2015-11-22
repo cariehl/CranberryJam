@@ -25,9 +25,10 @@ public class Rope : MonoBehaviour {
 
 	void Update () {
 
-		if (Input.GetButtonDown ("Fire3")) {
+		//if (Input.GetButtonDown ("Fire3")) {
 			Crosshair.S.aiming = true;
-		} else if (roping) {
+		//} else 
+		if (roping) {
 			if (arrived) {
 				gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 			} else {

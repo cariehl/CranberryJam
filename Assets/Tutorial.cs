@@ -4,10 +4,12 @@ using System.Collections;
 public class Tutorial : MonoBehaviour {
 
     bool sleep;
+    bool done;
 
 	// Use this for initialization
 	void Start () {
         sleep = false;
+        done = false;
 	}
 
     // Update is called once per frame
@@ -21,7 +23,10 @@ public class Tutorial : MonoBehaviour {
         //Debug.Log("intent");
         if (coll.gameObject.tag.Equals("Player")) {
             sleep = true;
-            //Sleep.S.tiredness += Sleep.S.time / 2;
+            if (!done) {
+                Sleep.S.tiredness = Sleep.S.time * 0.2f;
+                done = true;
+            }
         }
     }
 }
