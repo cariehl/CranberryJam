@@ -27,7 +27,7 @@ public class platform : MonoBehaviour {
         //Debug.Log(touched);
         if (falling) {
             if (touched) {
-                Debug.Log("go");
+                //Debug.Log("go");
                 timer += Time.deltaTime;
                 if (shake) {
                     transform.position += Vector3.right * 0.2f;
