@@ -32,7 +32,7 @@ public class Rope : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire3")) {
 			Crosshair.S.aiming = true;
 			rope.sprite = ropeSprite;
-			rope.transform.position = gameObject.transform.position;
+			//rope.transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), 0.5f);
 		}
 
 
@@ -50,14 +50,25 @@ public class Rope : MonoBehaviour {
 					arrived = true;
 					roping = false;
 					rope.sprite = null;
+
 					rope.transform.localScale = Vector3.one;
 					gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 
 				} else {
-					Vector3 temp2 = new Vector3(rope.transform.localScale.x + (trans*1) , rope.transform.localScale.y, 0);
+					Vector3 temp2 = new Vector3( (objective.x-transform.position.x)*10 -(trans*1) , rope.transform.localScale.y, 0);
 					rope.transform.localScale = temp2;
-					trans += 0.0005f;
+
+					float distance = Vector3.Distance(objective , transform.position);
+					float direction = Vector3.Angle(transform.position, objective);
+					float dirx = (objective.x - transform.position.x);
+
+					float angle = Mathf.Acos(dirx/direction)*Mathf.Rad2Deg;
+
+					Debug.Log (angle);
+					//rope.transform.rotation = Quaternion.Euler(direction);
+					trans += 0.05f;
 					transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), trans);
+					rope.transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), 0.5f);
 				}
 			}
 		}
