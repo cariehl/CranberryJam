@@ -22,7 +22,11 @@ public class Sleep : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (tiredness > time) {
-            Application.LoadLevel("GameOver");
+            if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
+                Application.LoadLevel("HighScore");
+            }
+            else
+                Application.LoadLevel("GameOver");
         }
         tiredness += Time.deltaTime;
         DontDestroy.S.score += Time.deltaTime;
