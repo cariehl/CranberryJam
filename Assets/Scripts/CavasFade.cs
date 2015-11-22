@@ -11,7 +11,7 @@ public class CavasFade : MonoBehaviour {
     // Use this for initialization
     void Start () {
         img = GetComponent<Image>();
-        ratio = Sleep.S.time / 0.5f;
+        ratio = Sleep.S.time / 0.7f;
 	}
 	
 	// Update is called once per frame
