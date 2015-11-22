@@ -25,7 +25,7 @@ public class Sleep : MonoBehaviour {
             CavasFade.S.alive = false;
         }
         tiredness += Time.deltaTime;
-        DontDestroy.S.score += Time.deltaTime;
+        DontDestroy.S.score += 10f * Time.deltaTime;
 	}
 
 }
