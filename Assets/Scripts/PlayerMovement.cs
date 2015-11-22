@@ -3,6 +3,14 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    static public PlayerMovement S;
+
+    void Awake() {
+        S = this;
+    }
+
+
     public float speed = 1f;
 	// Target jump height in terms of units
 	public float targetJumpHeight = 3.2f;
@@ -11,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rgbd;
     bool grounded = false;
     Animator anim;
+    [HideInInspector] public bool can_move;
 	
 
 	// Use this for initialization
@@ -25,27 +34,30 @@ public class PlayerMovement : MonoBehaviour
 		jumpForce = Mathf.Sqrt(2f * targetJumpHeight * Mathf.Abs(Physics2D.gravity.y));
 		anim.SetBool("running", false);
         anim.SetBool("facing_left", false);
+        can_move = true;
     }
 	
 	// Update is called once per frame
 	void Update ()
 	{
-        anim.SetBool("jumping", !grounded);
-        if (Input.GetAxis("Horizontal") > 0) {
-            anim.SetBool("facing_left", false);
-        }
-        if (Input.GetAxis("Horizontal") < 0) {
-            anim.SetBool("facing_left", true);
-        }
-        if (grounded) {
-            if (Input.GetButtonDown("Jump")) {
-				rgbd.velocity += new Vector2(0f, 1f * jumpForce);
-				grounded = false;
+        if (can_move) {
+            anim.SetBool("jumping", !grounded);
+            if (Input.GetAxis("Horizontal") > 0) {
+                anim.SetBool("facing_left", false);
             }
-            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0) {
-                anim.SetBool("running", true);
-            } else
-                anim.SetBool("running", false);
+            if (Input.GetAxis("Horizontal") < 0) {
+                anim.SetBool("facing_left", true);
+            }
+            if (grounded) {
+                if (Input.GetButtonDown("Jump")) {
+                    rgbd.velocity += new Vector2(0f, 1f * jumpForce);
+                    grounded = false;
+                }
+                if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0) {
+                    anim.SetBool("running", true);
+                } else
+                    anim.SetBool("running", false);
+            }
         }
 		
         rgbd.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rgbd.velocity.y);
