@@ -9,6 +9,8 @@ public class BackgroundGenerator : MonoBehaviour
 	// List of tiles and their weighted random chances
 	public Sprite[] tiles;
 	public int[] tileWeights;
+	public GameObject[] decorations;
+	public int[] decoWeights;
 
 	public GameObject coin;
 	public float coinChance;
@@ -19,6 +21,8 @@ public class BackgroundGenerator : MonoBehaviour
 	float tileHeight;	// Unit height of each tile
 	float startX = 0f;	// x-coord to start making tiles per row
 	float endX = 0f;    // x-coord to end making tiles per row
+
+	bool decoRow = true;
 
 	float itemSpawnMinX;
 	float itemSpawnMaxX;
@@ -35,6 +39,8 @@ public class BackgroundGenerator : MonoBehaviour
 		GameObject rowContainer = new GameObject("Row" + numRows);
 		numRows++;
 		rowContainer.transform.parent = this.transform;
+
+		bool madeDeco = false;
 
 		// Make a tile at each X point from left to right
 		for (float i = startX; i < endX; i += tileWidth) {
@@ -53,6 +59,7 @@ public class BackgroundGenerator : MonoBehaviour
 				rand -= tileWeights[j];
 			}
 
+			// Generate an item
 			if (i >= itemSpawnMinX && i < itemSpawnMaxX) {
 				float item = Random.Range(0f, 1f);
 				if (item < coinChance) {
@@ -66,6 +73,24 @@ public class BackgroundGenerator : MonoBehaviour
 					obj.transform.parent = rowContainer.transform;
 				}
 			}
+
+			// Generate a decoration
+			if (decoRow && !madeDeco) {
+				float decoChance = Random.Range(0f, 1f);
+				if (decoChance < 0.01f) {
+					madeDeco = true;
+					decoRow = false;
+					// Pick a random decoration
+					int pickDeco = Random.Range(0, 100);
+					for (int j = 0; j < decorations.Length; j++) {
+						if (pickDeco < decoWeights[j]) {
+							Instantiate(decorations[j], new Vector3(i, height), Quaternion.identity);
+							break;
+						}
+						pickDeco -= tileWeights[j];
+					}
+				}
+			}
 			
 			GameObject tileToMake = new GameObject();
 			tileToMake.AddComponent<SpriteRenderer>().sprite = spriteToUse;
@@ -73,6 +98,9 @@ public class BackgroundGenerator : MonoBehaviour
 			GameObject newTile = Instantiate(tileToMake, new Vector3(i, height), Quaternion.identity) as GameObject;
 			newTile.transform.parent = rowContainer.transform;
 		}
+
+		if (!decoRow && !madeDeco)
+			decoRow = true;
 	}
 
 	// Use this for initialization

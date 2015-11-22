@@ -495,6 +495,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decorations.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decoWeights.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 476796, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -526,6 +534,38 @@ Prefab:
     - target: {fileID: 476796, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decorations.Array.data[0]
+      value: 
+      objectReference: {fileID: 130828, guid: 988c2a8a299d9dd4f8a0a85c14e94c0c, type: 2}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decorations.Array.data[1]
+      value: 
+      objectReference: {fileID: 144620, guid: 2ea04dd88b348124895d7dcccac7e13d, type: 2}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decorations.Array.data[2]
+      value: 
+      objectReference: {fileID: 189150, guid: 39e7820d943551f4383c2441f57fd49e, type: 2}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decorations.Array.data[3]
+      value: 
+      objectReference: {fileID: 121144, guid: 8cd2d3680fb1ab341be629a0b15e87b1, type: 2}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decoWeights.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decoWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decoWeights.Array.data[2]
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: decoWeights.Array.data[3]
+      value: 29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
