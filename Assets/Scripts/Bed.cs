@@ -20,7 +20,7 @@ public class Bed : MonoBehaviour {
 		}
 		if (Input.GetButtonDown ("Fire2")&&nearbed){
 			Debug.Log ("Pillaged The Tent");
-			Sleep.S.score += 100;
+            DontDestroy.S.score += 100;
 		}
 	}
 
