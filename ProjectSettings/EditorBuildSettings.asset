@@ -4,9 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Scenes: []
-=======
   m_Scenes:
   - enabled: 1
     path: Assets/_Scenes/MainMenu.unity
@@ -16,4 +13,3 @@ EditorBuildSettings:
     path: Assets/_Scenes/GameScene.unity
   - enabled: 1
     path: Assets/_Scenes/GameOver.unity
->>>>>>> origin/master
