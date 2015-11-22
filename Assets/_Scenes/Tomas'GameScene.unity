@@ -144,8 +144,6 @@ GameObject:
   - 124: {fileID: 381595851}
   - 81: {fileID: 381595850}
   - 114: {fileID: 381595849}
-  - 114: {fileID: 381595856}
-  - 114: {fileID: 381595855}
   - 82: {fileID: 381595857}
   m_Layer: 0
   m_Name: Main Camera
@@ -237,32 +235,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &381595855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 381595848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125847d2d4d7de543bde0962d4f65728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audiolist: {fileID: 381595850}
-  Sfx: {fileID: 381595857}
---- !u!114 &381595856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 381595848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125847d2d4d7de543bde0962d4f65728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audiolist: {fileID: 0}
-  Sfx: {fileID: 0}
 --- !u!82 &381595857
 AudioSource:
   m_ObjectHideFlags: 0
@@ -272,14 +244,14 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: ecb6db9b0fd807a4495076b881440959, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .637000024
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 97
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
