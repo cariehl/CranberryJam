@@ -5,15 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Scenes/Tomas'GUI.unity
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
   - enabled: 0
     path: Assets/Scenes/Tomas'Scene.unity
-  - enabled: 1
-    path: Assets/_Scenes/Tomas'GUI.unity
-  - enabled: 1
+  - enabled: 0
+    path: Assets/_Scenes/MainMenu.unity
+  - enabled: 0
     path: Assets/_Scenes/Tomas'Scene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/ProceduralGenerationTest.unity
   - enabled: 1
     path: Assets/_Scenes/GameOver.unity
+  - enabled: 1
+    path: Assets/_Scenes/GameScene.unity

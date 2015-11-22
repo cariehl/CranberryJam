@@ -12,8 +12,7 @@ public class LoadLevel : MonoBehaviour {
 	void Update () {
 	
 	}
-	public void Loadlvl(){
-		Debug.Log ("Loading my scene");
+	public void Loadlvl() { 
 		Application.LoadLevel("GameScene");
 	}
 }

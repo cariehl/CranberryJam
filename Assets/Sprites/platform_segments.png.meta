@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 89edd1ef946e64d64a6c4607e220bc98
-timeCreated: 1448140044
+timeCreated: 1448156001
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -47,7 +47,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 250
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -60,7 +60,7 @@ TextureImporter:
         y: 0
         width: 250
         height: 133
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: platform_segments_1
@@ -70,7 +70,7 @@ TextureImporter:
         y: 0
         width: 250
         height: 133
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: platform_segments_2
@@ -80,7 +80,7 @@ TextureImporter:
         y: 0
         width: 250
         height: 133
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
