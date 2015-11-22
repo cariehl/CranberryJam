@@ -42,7 +42,7 @@ public class Rope : MonoBehaviour {
 				LineRendererScript.S.DrawRope();
 				LineRendererScript.S.destination.position = objective;
 				dist = Vector3.Distance(transform.position ,new Vector3 (objective.x, objective.y, 0f) );
-				if (dist < 0.3f ) {
+				if (dist < 1f ) {
 
 					trans = 0f;
 					arrived = true;

@@ -9,11 +9,13 @@ public class Crosshair : MonoBehaviour {
 	public GameObject projectile;
 	public bool aiming;
 	public Sprite target;
+	public Sprite cdSprite;
 	Camera cam;
 
 	public Sprite hitch_off;
 	public Sprite hitch_on;
-	
+
+	public float cooldown;
 
 	//Get the current mouse position in 2d Screen coords
 	Vector3 mousePos2D;
@@ -28,7 +30,10 @@ public class Crosshair : MonoBehaviour {
 
 	void Update()
 	{
-
+		if(cooldown <= 1) {
+			gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+		}
+		cooldown -= Time.deltaTime;
 		if (!aiming) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = null;
 			Cursor.visible = true;
@@ -56,8 +61,9 @@ public class Crosshair : MonoBehaviour {
 			projectile.transform.position = projPos;
 
 			if (Rope.S.num_ropes > 0) {
-				if (Input.GetButtonDown ("Fire3")) {
+				if (Input.GetButtonDown ("Fire3") && cooldown <= 1f) {
 					if (!hitch) {
+						cooldown = 5f;
 						Rope.S.objective = projectile.transform.position;
 						LineRendererScript.S.destination = projectile.transform;
 						Rope.S.moveToRope ();
@@ -66,7 +72,11 @@ public class Crosshair : MonoBehaviour {
 						Rope.S.moveToRope ();
 					}
 				}
+				if(cooldown > 1) {
+					gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+				}
 			}
+
 		}
 		this.aiming = Crosshair.S.aiming;
 	}
