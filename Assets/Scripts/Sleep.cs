@@ -11,9 +11,9 @@ public class Sleep : MonoBehaviour {
 
     public float time;
     //private float timer;
-	public int sleepTick;
-	public float tiredness = 0;
-	public int score = 0;
+	//public int sleepTick;
+	[HideInInspector] public float tiredness = 0;
+    [HideInInspector] public int score = 0;
 	
 	private int counter =1;
 
