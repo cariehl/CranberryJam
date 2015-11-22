@@ -10,7 +10,7 @@ public class GameOverScreen : MonoBehaviour {
 
 	public void Restart()
 	{
-		Application.LoadLevel("MainMenu");
+		Application.LoadLevel("GameScene");
 	}
 
     public void MainMenu() {
