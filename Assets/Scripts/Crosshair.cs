@@ -54,7 +54,7 @@ public class Crosshair : MonoBehaviour {
 			if (Rope.S.num_ropes > 0) {
 				if (Input.GetButtonDown ("Fire3") && cooldown <= 1f) {
 					cooldown = ropeCooldown;
-					Rope.S.objective = projectile.transform.position;
+					Rope.S.objective = projectile.transform.position + Vector3.up*2;
 					LineRendererScript.S.destination = projectile.transform;
 					Rope.S.moveToRope ();
 				}

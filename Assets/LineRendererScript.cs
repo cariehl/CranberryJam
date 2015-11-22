@@ -41,12 +41,14 @@ public class LineRendererScript : MonoBehaviour {
 		}
 			else {
 				counter =0f;
+				linerend.gameObject.SetActive(false);
 			}
 		}
 	}
 
 	public void DrawRope()
 	{
+		linerend.gameObject.SetActive (true);
 		linerend.SetPosition (0, origin.transform.position);
 		dist = Vector3.Distance (origin.transform.position, destination.position);
 		candraw = true;
