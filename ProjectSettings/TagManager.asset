@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hitch
+  - Ground
+  - Bed
+  - Coin
+  - Rope
   layers:
   - Default
   - TransparentFX

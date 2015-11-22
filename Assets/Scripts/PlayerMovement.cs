@@ -67,4 +67,15 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
     }
+
+	void OnTriggerEnter2D(Collider2D coll)
+	{
+		if (coll.gameObject.tag == "Coin") {
+			// TODO: Increase score
+			Destroy(coll.gameObject);
+		} else if (coll.gameObject.tag == "Rope") {
+			// TODO: Increase rope count
+			Destroy(coll.gameObject);
+		}
+	}
 }

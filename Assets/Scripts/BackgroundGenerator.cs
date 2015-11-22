@@ -10,13 +10,10 @@ public class BackgroundGenerator : MonoBehaviour
 	public Sprite[] tiles;
 	public int[] tileWeights;
 
-	public Sprite coinSprite;
+	public GameObject coin;
 	public float coinChance;
-	public Sprite ropeSprite;
+	public GameObject rope;
 	public float ropeChance;
-
-	GameObject coin;
-	GameObject rope;
 
 	float tileWidth;	// Unit width of each tile
 	float tileHeight;	// Unit height of each tile
@@ -55,14 +52,16 @@ public class BackgroundGenerator : MonoBehaviour
 
 			float item = Random.Range(0f, 1f);
 			if (item < coinChance) {
-				Instantiate(coin, new Vector3(i, height), Quaternion.identity);
+				GameObject obj = Instantiate(coin, new Vector3(i, height), Quaternion.identity) as GameObject;
+				obj.transform.parent = rowContainer.transform;
 			} else {
 				item -= coinChance;
-				if (item < ropeChance) {
-					Instantiate(rope, new Vector3(i, height), Quaternion.identity);
-				}
 			}
-
+			if (item < ropeChance) {
+				GameObject obj = Instantiate(rope, new Vector3(i, height), Quaternion.identity) as GameObject;
+				obj.transform.parent = rowContainer.transform;
+			}
+			
 			GameObject tileToMake = new GameObject();
 			tileToMake.AddComponent<SpriteRenderer>().sprite = spriteToUse;
 
@@ -74,12 +73,6 @@ public class BackgroundGenerator : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		coin = new GameObject();
-		coin.AddComponent<SpriteRenderer>().sprite = coinSprite;
-
-		rope = new GameObject();
-		rope.AddComponent<SpriteRenderer>().sprite = ropeSprite;
-
 		Vector2 botLeftScreen = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, Camera.main.nearClipPlane));
 		Vector2 topRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane));
 
