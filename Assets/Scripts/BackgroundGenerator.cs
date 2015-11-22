@@ -18,7 +18,10 @@ public class BackgroundGenerator : MonoBehaviour
 	float tileWidth;	// Unit width of each tile
 	float tileHeight;	// Unit height of each tile
 	float startX = 0f;	// x-coord to start making tiles per row
-	float endX = 0f;	// x-coord to end making tiles per row
+	float endX = 0f;    // x-coord to end making tiles per row
+
+	float itemSpawnMinX;
+	float itemSpawnMaxX;
 
 	// Current highest y level of tiles
 	float screenTopMax;
@@ -50,16 +53,18 @@ public class BackgroundGenerator : MonoBehaviour
 				rand -= tileWeights[j];
 			}
 
-			float item = Random.Range(0f, 1f);
-			if (item < coinChance) {
-				GameObject obj = Instantiate(coin, new Vector3(i, height), Quaternion.identity) as GameObject;
-				obj.transform.parent = rowContainer.transform;
-			} else {
-				item -= coinChance;
-			}
-			if (item < ropeChance) {
-				GameObject obj = Instantiate(rope, new Vector3(i, height), Quaternion.identity) as GameObject;
-				obj.transform.parent = rowContainer.transform;
+			if (i >= itemSpawnMinX && i < itemSpawnMaxX) {
+				float item = Random.Range(0f, 1f);
+				if (item < coinChance) {
+					GameObject obj = Instantiate(coin, new Vector3(i, height), Quaternion.identity) as GameObject;
+					obj.transform.parent = rowContainer.transform;
+				} else {
+					item -= coinChance;
+				}
+				if (item < ropeChance) {
+					GameObject obj = Instantiate(rope, new Vector3(i, height), Quaternion.identity) as GameObject;
+					obj.transform.parent = rowContainer.transform;
+				}
 			}
 			
 			GameObject tileToMake = new GameObject();
@@ -75,6 +80,10 @@ public class BackgroundGenerator : MonoBehaviour
 	{
 		Vector2 botLeftScreen = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, Camera.main.nearClipPlane));
 		Vector2 topRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane));
+
+		itemSpawnMinX = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0f, Camera.main.nearClipPlane)).x;
+		itemSpawnMaxX = Camera.main.ViewportToWorldPoint(new Vector3(0.9f, 0f, Camera.main.nearClipPlane)).x;
+		itemSpawnMaxX -= Mathf.Max(coin.GetComponent<BoxCollider2D>().bounds.size.x, rope.GetComponent<BoxCollider2D>().bounds.size.x);
 
 		tileWidth = tiles[0].bounds.size.x;
 		tileHeight = tiles[0].bounds.size.y;
