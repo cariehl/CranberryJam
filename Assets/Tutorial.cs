@@ -18,10 +18,10 @@ public class Tutorial : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D coll) {
-        Debug.Log("intent");
+        //Debug.Log("intent");
         if (coll.gameObject.tag.Equals("Player")) {
             sleep = true;
-            Sleep.S.tiredness += 20;
+            //Sleep.S.tiredness += Sleep.S.time / 2;
         }
     }
 }
