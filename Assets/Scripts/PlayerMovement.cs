@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        Debug.Log(PlayerPrefs.GetInt("highscore"));
 		rgbd = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		
@@ -54,8 +55,12 @@ public class PlayerMovement : MonoBehaviour
 	{
 		this.GetComponent<BoxCollider2D>().enabled = false;
 		yield return new WaitForSeconds(1.0f);
-		Application.LoadLevel("GameOver");
-	}
+        if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
+            Application.LoadLevel("HighScore");
+        }
+        else
+            Application.LoadLevel("GameOver");
+    }
 
     void OnCollisionEnter2D(Collision2D coll)
 	{
