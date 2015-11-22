@@ -3,6 +3,7 @@ using System.Collections;
 
 public class platform : MonoBehaviour {
 
+	public bool canBeHazard = true;
     public float falling_chance = 0.10f;
     public float speed = .1f;
     public float time = 1f;
@@ -13,8 +14,10 @@ public class platform : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        falling = Random.Range(0f, 1f) < falling_chance;
-        touched = false;
+		if (canBeHazard) {
+			falling = Random.Range(0f, 1f) < falling_chance;
+		}
+		touched = false;
         timer = 0f;
         shake = false;
 	}

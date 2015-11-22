@@ -45,6 +45,7 @@ MonoBehaviour:
   - {fileID: 114224, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
   - {fileID: 182422, guid: be2f24e56e3bac34e978d55eda6c8c08, type: 2}
   - {fileID: 181802, guid: 82a80640e3f552b419cad7fdc1c15ef6, type: 2}
+  - {fileID: 153024, guid: 852c63fc8d2ed46468aa69181a35ddfb, type: 2}
 --- !u!114 &11461780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,15 +57,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacd0569802c5db4c9925736755df36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileOffsetX: -1
+  tileOffsetX: 1
   tileOffsetY: 3
   tiles:
-  - {fileID: 175116, guid: 09e246d6bb918364a9366d9c94a69479, type: 2}
-  - {fileID: 150492, guid: 4921e99fe2297654496a9e7dc9d06541, type: 2}
-  - {fileID: 122146, guid: 03270c5e66b6d404d81cc09b142b5901, type: 2}
-  - {fileID: 183300, guid: b04263238457f6e46b8d78024d5f96d3, type: 2}
-  - {fileID: 107452, guid: f0e9b847c08bc454d8eedee669dc73eb, type: 2}
-  tileWeights: 28000000280000000a0000000700000003000000
+  - {fileID: 21300000, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
+  - {fileID: 21300004, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
+  - {fileID: 21300002, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
+  - {fileID: 21300006, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
+  tileWeights: 3c000000190000000e00000001000000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -160,6 +160,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 479702}
+  - 114: {fileID: 11429686}
   m_Layer: 0
   m_Name: Platform1
   m_TagString: Untagged
@@ -232,6 +233,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443600}
+  - 114: {fileID: 11428732}
   m_Layer: 0
   m_Name: Platform3
   m_TagString: Untagged
@@ -266,6 +268,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 418396}
+  - 114: {fileID: 11417590}
   m_Layer: 0
   m_Name: Platform2
   m_TagString: Untagged
@@ -980,6 +983,54 @@ EdgeCollider2D:
   m_Points:
   - {x: 0, y: .150000006}
   - {x: 1, y: .150000006}
+--- !u!114 &11417590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeHazard: 1
+  falling_chance: .100000001
+  speed: .100000001
+  time: 1
+  touched: 0
+--- !u!114 &11428732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeHazard: 1
+  falling_chance: .100000001
+  speed: .100000001
+  time: 1
+  touched: 0
+--- !u!114 &11429686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeHazard: 1
+  falling_chance: .100000001
+  speed: .100000001
+  time: 1
+  touched: 0
 --- !u!114 &11437242
 MonoBehaviour:
   m_ObjectHideFlags: 1
