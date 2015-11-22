@@ -14,7 +14,7 @@ public class door : MonoBehaviour {
 	}
     void OnTriggerStay2D(Collider2D coll) {
         if (Input.GetButtonDown("Fire1")) {
-            CavasFade.S.tent = true;
+            //CavasFade.S.tent = true;
             Application.LoadLevel(0);
         }
     }
