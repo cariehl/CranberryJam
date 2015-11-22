@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 	void Start ()
 	{
         DontDestroy.S.score = 0;
+        DontDestroy.S.level = Application.loadedLevel;
         rgbd = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		
@@ -55,15 +56,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		this.GetComponent<BoxCollider2D>().enabled = false;
 		yield return new WaitForSeconds(1.0f);
-        if (!tutorial) {
-            if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
-                Application.LoadLevel("HighScore");
-            } else
-                Application.LoadLevel("GameOver");
-        }
-        else {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+        if (!tutorial && DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
+            Application.LoadLevel("HighScore");
+        } else
+            Application.LoadLevel("GameOver");
     }
 
     void OnCollisionEnter2D(Collision2D coll)

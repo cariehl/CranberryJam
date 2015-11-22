@@ -16,6 +16,10 @@ public class LoadLevel : MonoBehaviour {
         Application.LoadLevel("GameScene");
 	}
 
+    public void tutorial() {
+        Application.LoadLevel("Tutorial");
+    }
+
     public void Reset() {
         PlayerPrefs.DeleteKey("highscore");
         PlayerPrefs.DeleteKey("highscoreName");

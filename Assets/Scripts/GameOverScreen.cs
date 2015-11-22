@@ -12,7 +12,7 @@ public class GameOverScreen : MonoBehaviour {
 
 	public void Restart()
 	{
-		Application.LoadLevel("GameScene");
+		Application.LoadLevel(DontDestroy.S.level);
 	}
 
     public void MainMenu() {

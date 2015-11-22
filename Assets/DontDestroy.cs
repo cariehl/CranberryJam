@@ -4,7 +4,8 @@ using System.Collections;
 public class DontDestroy
 {
     public float score;
-	private static DontDestroy _s = null;
+    public int level;
+    private static DontDestroy _s = null;
     public static DontDestroy S {
 		get {
 			if (_s == null)
@@ -15,6 +16,7 @@ public class DontDestroy
 
 	private DontDestroy()
 	{
+        level = 0;
 		score = 0;
 	}
 }

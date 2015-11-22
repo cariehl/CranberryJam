@@ -22,11 +22,7 @@ public class Sleep : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (tiredness > time) {
-            if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
-                Application.LoadLevel("HighScore");
-            }
-            else
-                Application.LoadLevel("GameOver");
+            CavasFade.S.alive = false;
         }
         tiredness += Time.deltaTime;
         DontDestroy.S.score += Time.deltaTime;

@@ -846,7 +846,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 341116686}
-        m_MethodName: Loadlvl
+        m_MethodName: tutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
