@@ -27,20 +27,6 @@ public class CavasFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
-//        Debug.Log(alpha);
-        if (alive) {
-            alpha = Sleep.S.tiredness / ratio;
-        }
-        else {
-            alpha += alpha / 100;
-            if (alpha >= 1) {
-                if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
-                    Application.LoadLevel("HighScore");
-                } else {
-                    Application.LoadLevel("GameOver");
-=======
-        //Debug.Log(tent);
         if (tent) {
             //Debug.Log("go");
             if (black) {
@@ -66,7 +52,6 @@ public class CavasFade : MonoBehaviour {
                     } else {
                         Application.LoadLevel("GameOver");
                     }
->>>>>>> origin/master
                 }
             }
             img.color = new Color(0f, 0f, 0f, alpha);
