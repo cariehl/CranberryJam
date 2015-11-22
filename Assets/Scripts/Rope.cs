@@ -7,7 +7,7 @@ public class Rope : MonoBehaviour {
 
 	public int num_ropes = 0;
 	public Vector3 objective;
-	public float radius;
+	public float radius = 6;
 	public float ropeSpeed = 0.005f;
 	public bool ________________________;
 	public bool roping;	
