@@ -27,18 +27,15 @@ public class Rope : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire3")) {
 			Crosshair.S.aiming = true;
-		}
-
-		else if (roping) {
+		} else if (roping) {
 			if (arrived) {
 				gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
-			}
-			else {
+			} else {
 				Crosshair.S.aiming = false;
 				LineRendererScript.S.destination.position = objective;
-				LineRendererScript.S.DrawRope();
-				dist = Vector3.Distance(transform.position ,new Vector3 (objective.x, objective.y, 0f) );
-				if (dist < 2f ) {
+				LineRendererScript.S.DrawRope ();
+				dist = Vector3.Distance (transform.position, new Vector3 (objective.x, objective.y, 0f));
+				if (dist < 2f) {
 
 					trans = 0f;
 					arrived = true;
@@ -50,6 +47,9 @@ public class Rope : MonoBehaviour {
 					transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), trans);
 				}
 			}
+		} else { //roping
+		//Disable rope
+
 		}
 	}
 
