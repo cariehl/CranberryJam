@@ -2,57 +2,28 @@
 using System.Collections;
 
 public class Bed : MonoBehaviour {
-	public Sprite K;
-	public Sprite A;
-	public Sprite B;
-	public Sprite L;
-	
-	private bool nearbed;
-	public SpriteRenderer button;
-	public SpriteRenderer button2;
-	
-	// Use this for initialization
-	void Update()
-	{
-		if (Input.GetButtonDown ("Fire1")&&nearbed) {
-			Debug.Log ("Slept On the Tent");
-			Sleep.S.tiredness = 0;
-		}
-	}
+    public Sprite[] sprites;
+    SpriteRenderer rend;
+    bool done;
+
+    void Start() {
+        rend = gameObject.GetComponent<SpriteRenderer>();
+        done = false;
+        rend.sprite = sprites[0];
+    }
+
+    // Use this for initialization
+    void Update() {
+
+    }
 
 
-	void OnTriggerEnter2D(Collider2D coll)
-	{
-		Debug.Log ("Collided");
-		nearbed = true;
-		if (coll.gameObject.tag.Equals ("Player")) {
-			if(xboxCont())
-			{ 
-				button.sprite = A;
-				button2.sprite = B;
-			}
-			else 
-			{
-				button.sprite = L;
-				button2.sprite = K;
-			}
-		}
-	}
-	
-	public bool xboxCont()
-	{
-		
-		if (Input.GetJoystickNames ().Length > 0) {
-			return true;
-		}
-		return false;
-	}
-
-
-	void OnTriggerExit2D(Collider2D coll)
-	{
-		nearbed = false;
-		button.sprite = null;
-		button2.sprite = null;
-	}
+    void OnTriggerStay2D(Collider2D coll) {
+        if (!done && Input.GetButtonDown("Fire1")) {
+            done = true;
+            CavasFade.S.tent = true;
+            rend.sprite = sprites[1];
+            Sleep.S.tiredness = 0;
+        }
+    }
 }
