@@ -5,20 +5,22 @@ public class SoundManager : MonoBehaviour {
 	//Singleton Class
 	public static SoundManager S;
 	public AudioListener audiolist;
+	public AudioSource Sfx;
 
-	public AudioSource[] tracks;
 	void Awake(){
 		S = this;
-		tracks = new AudioSource[]{};
-	}
+		}
 
 	void Start(){
-		audiolist = gameObject.GetComponent<AudioListener> ();
+		Sfx = Camera.main.gameObject.GetComponent<AudioSource> ();
+		audiolist = Camera.main.gameObject.GetComponent<AudioListener> ();
 	}
 
-	public void PlaySound()
+	public void PlaySound(AudioClip clip)
 	{
-
+		Sfx.clip = clip;
+		Sfx.Play ();
 	}
+	
 
 }

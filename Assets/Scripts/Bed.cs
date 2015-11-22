@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Bed : MonoBehaviour {
     public Sprite[] sprites;
-    SpriteRenderer rend;
+	public AudioClip bedsound;
+	SpriteRenderer rend;
     bool done;
 
     void Start() {
@@ -24,6 +25,7 @@ public class Bed : MonoBehaviour {
             CavasFade.S.tent = true;
             rend.sprite = sprites[1];
             Sleep.S.tiredness = 0;
+			SoundManager.S.PlaySound(bedsound);
         }
     }
 }

@@ -115,6 +115,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: fba14821b00cf48fc9780daa14fefd66, type: 3}
   - {fileID: 21300000, guid: d45b705c5ab98468682868e9c468402b, type: 3}
+  bedsound: {fileID: 8300000, guid: 4f9a567c32e4f0d43b3f4defe929824d, type: 3}
 --- !u!212 &21204340
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -208,6 +209,14 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f9a567c32e4f0d43b3f4defe929824d, type: 3}
+    - target: {fileID: 0}
+      propertyPath: bedsound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f9a567c32e4f0d43b3f4defe929824d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 137732}
