@@ -5,7 +5,7 @@ public class Rope : MonoBehaviour {
 	public static Rope S;
 	public Vector3 objective;
 	
-	public int num_ropes = 1;
+	public int num_ropes = 0;
 	public bool arrived = false;
 	private float temp;
 	private float trans;
