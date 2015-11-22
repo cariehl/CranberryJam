@@ -419,7 +419,7 @@ GameObject:
   - 4: {fileID: 472616}
   - 114: {fileID: 11480370}
   m_Layer: 0
-  m_Name: PlatformTemplate4
+  m_Name: BedTemplate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1920,6 +1920,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: fba14821b00cf48fc9780daa14fefd66, type: 3}
   - {fileID: 21300000, guid: d45b705c5ab98468682868e9c468402b, type: 3}
+  bedsound: {fileID: 0}
 --- !u!114 &11475420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1969,7 +1970,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1995,7 +1998,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2021,7 +2026,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2047,7 +2054,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2073,7 +2082,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2099,7 +2110,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2125,7 +2138,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2151,7 +2166,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2177,7 +2194,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2203,7 +2222,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2229,7 +2250,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2255,7 +2278,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2281,7 +2306,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2307,7 +2334,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2333,7 +2362,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2359,7 +2390,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2385,7 +2418,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2411,7 +2446,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2437,7 +2474,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2463,7 +2502,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2489,7 +2530,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2515,7 +2558,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2541,7 +2586,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2567,7 +2614,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2593,7 +2642,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2619,7 +2670,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2645,7 +2698,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2671,7 +2726,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2697,7 +2754,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2720,6 +2779,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25110290
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2735,6 +2795,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25110310
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2750,6 +2811,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25113532
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2765,6 +2827,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25117184
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2780,6 +2843,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25125868
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2795,6 +2859,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25130080
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2810,6 +2875,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25136044
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2825,6 +2891,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25137216
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2840,6 +2907,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25147966
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2855,6 +2923,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25154214
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2870,6 +2939,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25158638
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2885,6 +2955,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25166410
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2900,6 +2971,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25169154
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2915,6 +2987,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25171800
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2930,6 +3003,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25172638
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2945,6 +3019,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25174110
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2960,6 +3035,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25174768
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2975,6 +3051,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25178544
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -2990,6 +3067,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25181716
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3005,6 +3083,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25187054
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3020,6 +3099,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25192602
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3035,6 +3115,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25193910
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3050,6 +3131,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25194624
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3065,6 +3147,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25197500
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3080,6 +3163,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!251 &25198538
 PlatformEffector2D:
   m_ObjectHideFlags: 1
@@ -3095,6 +3179,7 @@ PlatformEffector2D:
   m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

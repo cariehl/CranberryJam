@@ -41,10 +41,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minNumTemplatesOnScreen: 4
+  minDistanceBetweenBeds: 3
+  bedDistanceVariance: 2
   platformTemplates:
   - {fileID: 114224, guid: aefb916ac68dd5c49a3e2acf43502e57, type: 2}
   - {fileID: 182422, guid: be2f24e56e3bac34e978d55eda6c8c08, type: 2}
   - {fileID: 181802, guid: 82a80640e3f552b419cad7fdc1c15ef6, type: 2}
+  bedTemplates:
   - {fileID: 153024, guid: 852c63fc8d2ed46468aa69181a35ddfb, type: 2}
 --- !u!114 &11461780
 MonoBehaviour:
