@@ -19,7 +19,7 @@ public class CavasFade : MonoBehaviour {
     // Use this for initialization
     void Start () {
         img = GetComponent<Image>();
-        ratio = Sleep.S.time / 0.9f;
+        ratio = Sleep.S.time / (0.9f - 0.1f);
         alive = true;
         black = true;
         tent = false;
@@ -27,6 +27,7 @@ public class CavasFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+       
         if (tent) {
             //Debug.Log("go");
             if (black) {
@@ -43,8 +44,10 @@ public class CavasFade : MonoBehaviour {
             }
         } else {
             if (alive) {
-                alpha = Sleep.S.tiredness / ratio;
+               // Debug.Log(Sleep.S.tiredness);
+                alpha = (Sleep.S.tiredness) / ratio + 0.1f;
             } else {
+                //Debug.Log("dead");
                 alpha += alpha / 100;
                 if (alpha >= 1) {
                     if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {

@@ -25,7 +25,7 @@ public class Bed : MonoBehaviour {
             CavasFade.S.tent = true;
             rend.sprite = sprites[1];
             Sleep.S.tiredness = 0;
-			SoundManager.S.PlaySound(bedsound);
+			//SoundManager.S.PlaySound(bedsound);
         }
     }
 }

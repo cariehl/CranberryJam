@@ -21,7 +21,10 @@ public class Sleep : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(tiredness);
         if (tiredness > time) {
+            Debug.Log(time);
+            Debug.Log(tiredness);
             CavasFade.S.alive = false;
         }
         tiredness += Time.deltaTime;
