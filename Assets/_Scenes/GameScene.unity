@@ -474,11 +474,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b80d6bde0d9ea64982ef14a3e505cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: {x: 0, y: 0, z: 0}
   num_ropes: 1
-  arrived: 0
+  objective: {x: 0, y: 0, z: 0}
   radius: 0
+  ropeSpeed: .00499999989
+  ________________________: 0
   roping: 0
+  arrived: 0
 --- !u!1001 &1734703265
 Prefab:
   m_ObjectHideFlags: 0
