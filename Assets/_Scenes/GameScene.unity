@@ -382,6 +382,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: coinSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87c3b7be5c72aff4f857154833efdd10,
+        type: 3}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: ropeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e8941d5cbac9fd4c89a589c28348b84,
+        type: 3}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: coinChance
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461780, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
+      propertyPath: ropeChance
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05b420765f4487f4292d713a73e3cd08, type: 2}
   m_IsPrefabParent: 0

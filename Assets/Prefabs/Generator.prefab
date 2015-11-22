@@ -65,6 +65,10 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   - {fileID: 21300006, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   tileWeights: 3c000000190000000e00000001000000
+  coinSprite: {fileID: 0}
+  coinChance: .00499999989
+  ropeSprite: {fileID: 0}
+  ropeChance: .00100000005
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
