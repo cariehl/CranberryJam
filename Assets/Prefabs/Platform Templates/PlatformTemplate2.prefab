@@ -46,6 +46,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405026}
+  - 114: {fileID: 11442098}
   m_Layer: 0
   m_Name: Platform2
   m_TagString: Untagged
@@ -99,6 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 424460}
+  - 114: {fileID: 11479000}
   m_Layer: 0
   m_Name: Platform3
   m_TagString: Untagged
@@ -114,6 +116,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473532}
+  - 114: {fileID: 11412574}
   m_Layer: 0
   m_Name: Platform5
   m_TagString: Untagged
@@ -300,6 +303,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484704}
+  - 114: {fileID: 11469236}
   m_Layer: 0
   m_Name: Platform4
   m_TagString: Untagged
@@ -426,6 +430,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481562}
+  - 114: {fileID: 11498102}
   m_Layer: 0
   m_Name: Platform1
   m_TagString: Untagged
@@ -1408,6 +1413,36 @@ EdgeCollider2D:
   m_Points:
   - {x: 0, y: .150000006}
   - {x: 1, y: .150000006}
+--- !u!114 &11412574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falling_chance: .100000001
+  speed: 5
+  time: 2
+  touched: 0
+--- !u!114 &11442098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falling_chance: .100000001
+  speed: 5
+  time: 2
+  touched: 0
 --- !u!114 &11446936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1423,6 +1458,51 @@ MonoBehaviour:
   width: 14
   offsetX: -7
   offsetY: -3
+--- !u!114 &11469236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falling_chance: .100000001
+  speed: 5
+  time: 2
+  touched: 0
+--- !u!114 &11479000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falling_chance: .100000001
+  speed: 5
+  time: 2
+  touched: 0
+--- !u!114 &11498102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869668c43ef52f64682baa5290e753ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  falling_chance: .100000001
+  speed: 5
+  time: 2
+  touched: 0
 --- !u!212 &21206758
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -2311,6 +2391,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: platforms.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2333,6 +2417,54 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: width
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[0].x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[0].length
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[1].length
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[2].y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[2].length
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[3].x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[3].y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[3].length
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[4].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[4].y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: platforms.Array.data[4].length
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
