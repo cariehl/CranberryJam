@@ -51,15 +51,19 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	// Cause the player to fall out of the world
-	public IEnumerator FallOut()
+	public IEnumerator FallOut(bool tutorial)
 	{
 		this.GetComponent<BoxCollider2D>().enabled = false;
 		yield return new WaitForSeconds(1.0f);
-        if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
-            Application.LoadLevel("HighScore");
+        if (!tutorial) {
+            if (DontDestroy.S.score > PlayerPrefs.GetInt("highscore")) {
+                Application.LoadLevel("HighScore");
+            } else
+                Application.LoadLevel("GameOver");
         }
-        else
-            Application.LoadLevel("GameOver");
+        else {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D coll)

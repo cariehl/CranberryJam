@@ -7,6 +7,7 @@ public class CameraBehaviour : MonoBehaviour {
     public float upperBound;
 	public float lowerBound;
 	public float camMinimumOffset;
+    public bool tutorial = false;
 
 	BoxCollider2D playerCollider;
 	// Top and bottom of player frame
@@ -52,7 +53,7 @@ public class CameraBehaviour : MonoBehaviour {
 			} else if (playerBotY < killzone) {
 				// Dead
 				Debug.Log("Killzone");
-				StartCoroutine(player.GetComponent<PlayerMovement>().FallOut());
+				StartCoroutine(player.GetComponent<PlayerMovement>().FallOut(tutorial));
 			}
 		}
 	}
