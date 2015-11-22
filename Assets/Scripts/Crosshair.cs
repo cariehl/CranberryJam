@@ -31,8 +31,10 @@ public class Crosshair : MonoBehaviour {
 
 		if (!aiming) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = null;
+			Cursor.visible = true;
 		}
 		else {
+			Cursor.visible = false;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = target;
 			mousePos2D = Input.mousePosition;
 			//Conver the position to 3d coords
