@@ -13,13 +13,14 @@ public class Sleep : MonoBehaviour {
     //private float timer;
 	//public int sleepTick;
 	[HideInInspector] public float tiredness = 0;
-    [HideInInspector] public int score = 0;
+    [HideInInspector] public float score = 0;
 	
 	private int counter =1;
 
 	// Use this for initialization
 	void Start () {
         tiredness = 0;
+        score = 0;
 	}
 	
 	// Update is called once per frame
@@ -39,7 +40,7 @@ public class Sleep : MonoBehaviour {
             Application.LoadLevel("GameOver");
         }
         tiredness += Time.deltaTime;
-        score += Mathf.FloorToInt(Time.deltaTime);
+        score += Time.deltaTime;
 	}
 
 }

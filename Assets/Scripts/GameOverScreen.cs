@@ -10,11 +10,15 @@ public class GameOverScreen : MonoBehaviour {
 
 	public void Restart()
 	{
-		Application.LoadLevel("MainMenu");
+		Application.LoadLevel("GameScene");
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void MainMenu() {
+        Application.LoadLevel("MainMenu");
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }
