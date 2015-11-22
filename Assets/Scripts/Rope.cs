@@ -12,10 +12,7 @@ public class Rope : MonoBehaviour {
 	private float dist;
 	public float radius;
 	public bool roping;
-
-	public SpriteRenderer rope;
-	public Sprite ropeSprite;
-
+	
 	void Awake()
 	{
 		S = this;
@@ -31,7 +28,6 @@ public class Rope : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire3")) {
 			Crosshair.S.aiming = true;
-			rope.sprite = ropeSprite;
 			//rope.transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), 0.5f);
 		}
 
@@ -43,32 +39,20 @@ public class Rope : MonoBehaviour {
 				//deactivate rope
 			} else {
 				Crosshair.S.aiming = false;
+				LineRendererScript.S.DrawRope();
+				LineRendererScript.S.destination.position = objective;
 				dist = Vector3.Distance(transform.position ,new Vector3 (objective.x, objective.y, 0f) );
 				if (dist < 0.3f ) {
 
 					trans = 0f;
 					arrived = true;
 					roping = false;
-					rope.sprite = null;
 
-					rope.transform.localScale = Vector3.one;
 					gameObject.GetComponent<Rigidbody2D> ().gravityScale = temp;
 
 				} else {
-					Vector3 temp2 = new Vector3( (objective.x-transform.position.x)*10 -(trans*1) , rope.transform.localScale.y, 0);
-					rope.transform.localScale = temp2;
-
-					float distance = Vector3.Distance(objective , transform.position);
-					float direction = Vector3.Angle(transform.position, objective);
-					float dirx = (objective.x - transform.position.x);
-
-					float angle = Mathf.Acos(dirx/direction)*Mathf.Rad2Deg;
-
-					Debug.Log (angle);
-					//rope.transform.rotation = Quaternion.Euler(direction);
-					trans += 0.05f;
+					trans += 0.0005f;
 					transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), trans);
-					rope.transform.position = Vector3.Lerp (transform.position, new Vector3 (objective.x, objective.y, 0f), 0.5f);
 				}
 			}
 		}
