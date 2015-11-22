@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 89edd1ef946e64d64a6c4607e220bc98
-timeCreated: 1448140044
+guid: e987fcc80c9a9453da11122ea1e07188
+timeCreated: 1448148400
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: platform_segments_0
-    21300002: platform_segments_1
-    21300004: platform_segments_2
+    21300000: mouse_click_0
+    21300002: mouse_click_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -47,39 +46,29 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: platform_segments_0
+    - name: mouse_click_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 250
-        height: 133
+        width: 300
+        height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: platform_segments_1
+    - name: mouse_click_1
       rect:
         serializedVersion: 2
-        x: 250
+        x: 301
         y: 0
-        width: 250
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: platform_segments_2
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 250
-        height: 133
+        width: 299
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

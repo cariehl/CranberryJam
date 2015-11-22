@@ -4,8 +4,8 @@ using System.Collections;
 public class platform : MonoBehaviour {
 
     public float falling_chance = 0.10f;
-    public float speed = 5f;
-    public float time = 2f;
+    public float speed = .1f;
+    public float time = 1f;
     float timer;
     bool falling;
     [HideInInspector] public bool touched;
@@ -40,5 +40,4 @@ public class platform : MonoBehaviour {
         }
 	}
 
-    
 }
