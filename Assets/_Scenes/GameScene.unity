@@ -594,37 +594,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 5f20d889d94ab684e866fdff3d800377, type: 2}
   m_PrefabInternal: {fileID: 1734703265}
---- !u!114 &1577479009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577479002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dc371c2d54b614f82271398735ed57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 20
-  tiredness: 0
---- !u!114 &1577479010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577479002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b80d6bde0d9ea64982ef14a3e505cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num_ropes: 1
-  objective: {x: 0, y: 0, z: 0}
-  radius: 0
-  ropeSpeed: .00499999989
-  ________________________: 0
-  roping: 0
-  arrived: 0
 --- !u!1 &1719601492
 GameObject:
   m_ObjectHideFlags: 0
