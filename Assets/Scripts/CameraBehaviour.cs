@@ -9,10 +9,21 @@ public class CameraBehaviour : MonoBehaviour {
 	public float camMinimumOffset;
 
 	BoxCollider2D playerCollider;
+	// Top and bottom of player frame
 	float playerTopY;
 	float playerBotY;
+	// How tall the player is
 	float playerHeight;
+	// Minimum amount the camera can scroll down to
 	float camMinimumY;
+	// Zone that will kill the player if they get too far down
+	float killzone
+	{
+		get
+		{
+			return Camera.main.ViewportToWorldPoint(new Vector3(0f, -0.06f, Camera.main.nearClipPlane)).y;
+        }
+	}
 
     // Use this for initialization
     void Start ()
@@ -38,8 +49,9 @@ public class CameraBehaviour : MonoBehaviour {
         } else if (playerBotY < camBotY) {
 			if (playerBotY >= camMinimumY) {
 				transform.Translate(new Vector3(0, playerBotY - camBotY, 0));
-			} else {
+			} else if (playerBotY < killzone) {
 				// Dead
+				Debug.Log("Killzone");
 				StartCoroutine(player.GetComponent<PlayerMovement>().FallOut());
 			}
 		}

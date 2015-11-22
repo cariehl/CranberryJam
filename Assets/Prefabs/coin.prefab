@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2081496113
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87c3b7be5c72aff4f857154833efdd10, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300006, guid: b02462d119a354927bac7a8342f8b430, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -88,6 +88,15 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300006, guid: b02462d119a354927bac7a8342f8b430,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

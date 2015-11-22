@@ -58,17 +58,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileOffsetX: 1
-  tileOffsetY: 3
+  tileOffsetY: 5
   tiles:
   - {fileID: 21300000, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   - {fileID: 21300004, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   - {fileID: 21300002, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   - {fileID: 21300006, guid: 63c2e6f6e17f8404eb59c7ed666b0248, type: 3}
   tileWeights: 3c000000190000000e00000001000000
-  coinSprite: {fileID: 0}
-  coinChance: .00499999989
-  ropeSprite: {fileID: 0}
-  ropeChance: .00100000005
+  coin: {fileID: 119456, guid: 89ea3dd7a30e9794086b10a318f5179e, type: 2}
+  coinChance: .0500000007
+  rope: {fileID: 189578, guid: 47bb732fd3436cd43bff12fbae2d36e2, type: 2}
+  ropeChance: .00999999978
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
