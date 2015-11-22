@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-        Debug.Log(PlayerPrefs.GetInt("highscore"));
-		rgbd = GetComponent<Rigidbody2D>();
+        DontDestroy.S.score = 0;
+        rgbd = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		
 		targetJumpHeight *= rgbd.gravityScale;

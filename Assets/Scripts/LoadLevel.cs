@@ -13,8 +13,11 @@ public class LoadLevel : MonoBehaviour {
 	
 	}
 	public void Loadlvl() {
-        PlayerPrefs.DeleteKey("highscore");
-        PlayerPrefs.DeleteKey("highscorename");
         Application.LoadLevel("GameScene");
 	}
+
+    public void Reset() {
+        PlayerPrefs.DeleteKey("highscore");
+        PlayerPrefs.DeleteKey("highscoreName");
+    }
 }
