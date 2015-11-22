@@ -13,7 +13,11 @@ public class LoadLevel : MonoBehaviour {
 	
 	}
 	public void Loadlvl(){
-		Debug.Log ("Loading my scene");
+		//Debug.Log ("Loading my scene");
 		Application.LoadLevel("GameScene");
 	}
+    public void Loadtut() {
+        //Debug.Log("Loading my scene");
+        Application.LoadLevel("Tutorial");
+    }
 }
