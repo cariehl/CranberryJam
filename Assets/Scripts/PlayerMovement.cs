@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
 		if (coll.gameObject.tag == "Ground") {
 			// Checks to see if we hit the collider from the top
 			if (coll.enabled) {
+				coll.transform.parent.GetComponent<platform>().touched = true;
 				grounded = true;
 			}
 		}
