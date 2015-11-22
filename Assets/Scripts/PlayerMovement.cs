@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        Cursor.visible = false;
         DontDestroy.S.score = 0;
         DontDestroy.S.level = Application.loadedLevel;
         rgbd = GetComponent<Rigidbody2D>();
@@ -95,4 +96,8 @@ public class PlayerMovement : MonoBehaviour
 			Destroy(coll.gameObject);
 		}
 	}
+
+    void OnDestroy() {
+        Cursor.visible = true;
+    }
 }
