@@ -28,7 +28,7 @@ GameObject:
   - 61: {fileID: 6185176}
   - 114: {fileID: 11430260}
   m_Layer: 0
-  m_Name: Bed
+  m_Name: Bed_old
   m_TagString: Bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,12 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ed27ca73cef2a4eaec09c9d7591dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  K: {fileID: 21300000, guid: 13cecc246de4cef4c87bbd854897b582, type: 3}
-  A: {fileID: 21300000, guid: fb39d4a078a05434c8a02082017e9cc7, type: 3}
-  B: {fileID: 21300000, guid: 8d5604cba80a2074f916c04c364cd43f, type: 3}
-  L: {fileID: 21300000, guid: 64c1d6e63c18e5f47b0d45fada95abcc, type: 3}
-  button: {fileID: 21267738}
-  button2: {fileID: 0}
+  sprites: []
 --- !u!212 &21204340
 SpriteRenderer:
   m_ObjectHideFlags: 1
