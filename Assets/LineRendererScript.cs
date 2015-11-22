@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LineRendererScript : MonoBehaviour {
 	public static  LineRendererScript S;
-	public Transform origin;
+	public GameObject origin;
 	public Transform destination;
 
 	private float dist;
@@ -27,20 +27,22 @@ public class LineRendererScript : MonoBehaviour {
 
 				float x = Mathf.Lerp (0, dist, counter);
 
-				Vector3 pointA = origin.position;
+				Vector3 pointA = origin.transform.position;
 				Vector3 pointB = destination.position;
 
 				Vector3 pointAlongLine = x * Vector3.Normalize (pointB - pointA) + pointA;
 				linerend.SetPosition (1, pointAlongLine);
 			}
-
+			//if (Vector3.Distance(origin.transform.position,destination.position) < 2 ) {
+			//	destination = origin.transform;
+			//}
 		}
 	}
 
 	public void DrawRope()
 	{
-		linerend.SetPosition (0, origin.position);
-		dist = Vector3.Distance (origin.position, destination.position);
+		linerend.SetPosition (0, origin.transform.position);
+		dist = Vector3.Distance (origin.transform.position, destination.position);
 		candraw = true;
 	}
 

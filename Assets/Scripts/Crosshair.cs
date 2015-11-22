@@ -59,6 +59,7 @@ public class Crosshair : MonoBehaviour {
 				if (Input.GetButtonDown ("Fire3")) {
 					if (!hitch) {
 						Rope.S.objective = projectile.transform.position;
+						LineRendererScript.S.destination = projectile.transform;
 						Rope.S.moveToRope ();
 					} else { 
 						Rope.S.objective = cr_objective;
